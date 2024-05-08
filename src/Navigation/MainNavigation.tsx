@@ -23,10 +23,13 @@ const BottomTabNavigator = () => {
           bottom: 0,
           left: 0,
           right: 0,
-          height: 80,
-          backgroundColor: '#292929',
+          height: 90,
+          backgroundColor: '#292929', 
+          borderTopWidth:0
         },
       }}>
+
+     
       <Tab.Screen
         name={NAME_SCREENS.HOME}
         component={Home}

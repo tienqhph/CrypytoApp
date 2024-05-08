@@ -12,18 +12,18 @@ type iconType = {
 export default function IconTabComponent({icon, focused, name}: iconType) {
   return (
     <View
-      style={[style.cIconComponent, name == 'Trade' ? style.cNameTrade : {}]}>
+      style={[style.cIconComponent, focused && name == 'Trade' ?style.cNameTrade :{}]}>
       <Image
         source={icon}
         style={[
           focused ? style.iconBottomtab : style.iconBottomTabUnFocused,
-          name == 'Trade' ? {tintColor: Colors.white} : {},
+          focused && name == 'Trade' ? {tintColor: Colors.white} : {},
         ]}
       />
       <Text
         style={[
           focused ? style.txtBottomTab : style.txtunFocusedBottomTab,
-          name == 'Trade' ? {color: Colors.white} : {},
+          focused && name ? {color: Colors.white} : {},
         ]}>
         {name}
       </Text>
